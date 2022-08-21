@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="FloatingNotificationView" customModule="SurfEducationProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvw-AF-Rhx" customClass="DesignableView" customModule="SurfEducationProject" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUJ-TP-dXa">
+                            <rect key="frame" x="12" y="62" width="392" height="17"/>
+                            <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="14"/>
+                            <color key="textColor" name="WhiteTitle"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="ErrorView"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qUJ-TP-dXa" secondAttribute="trailing" constant="10" id="GDg-RF-72M"/>
+                        <constraint firstItem="qUJ-TP-dXa" firstAttribute="top" relation="lessThanOrEqual" secondItem="tvw-AF-Rhx" secondAttribute="top" constant="62" id="QPF-jr-hwg"/>
+                        <constraint firstItem="qUJ-TP-dXa" firstAttribute="leading" secondItem="tvw-AF-Rhx" secondAttribute="leading" constant="12" id="eP2-KC-iOu"/>
+                        <constraint firstAttribute="bottom" secondItem="qUJ-TP-dXa" secondAttribute="bottom" constant="12" id="o1G-b5-2My"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tvw-AF-Rhx" secondAttribute="bottom" id="Pr9-E4-0xv"/>
+                <constraint firstAttribute="trailing" secondItem="tvw-AF-Rhx" secondAttribute="trailing" id="TEo-0E-Uwl"/>
+                <constraint firstItem="tvw-AF-Rhx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TVn-RB-f3G"/>
+                <constraint firstItem="tvw-AF-Rhx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZwN-u8-L5d"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="tvw-AF-Rhx" id="gy2-Tl-lwq"/>
+                <outlet property="titleLabel" destination="qUJ-TP-dXa" id="1rc-MI-xZ6"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ErrorView">
+            <color red="0.95294117647058818" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteTitle">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
